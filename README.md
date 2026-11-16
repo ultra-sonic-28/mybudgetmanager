@@ -113,10 +113,27 @@ Tous les éléments visuels ont été soit créés spécifiquement pour ce proje
 - Historisation des événements importants.
 - Contrôle de l'intégrité des données.
 
+## Installation
+
 ### Prérequis
 
 - Python 3.13 or higher
 - Windows 10/11
+
+### Installation from sources
+
+Open a terminal and run the following commands:
+
+    # Clone the repository
+    git clone https://github.com/ultra-sonic-28/mybudgetmanager.git
+    cd mybudgetmanager
+
+    # Start coding
+    # using your favorite code editor
+
+## License
+
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
