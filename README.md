@@ -117,24 +117,48 @@ Tous les éléments visuels ont été soit créés spécifiquement pour ce proje
 
 ### Prérequis
 
-- Python 3.13 or higher
+- Python 3.13 ou version ultérieure
 - Windows 10/11
 
-### Installation from sources
+### Installation à partir des sources
 
-Open a terminal and run the following commands:
+Ouvrez un terminal et exécutez les commandes suivantes :
 
-    # Clone the repository
+    # Cloner le dépôt
     git clone https://github.com/ultra-sonic-28/mybudgetmanager.git
     cd mybudgetmanager
 
-    # Start coding
-    # using your favorite code editor
+    # Commencez à coder
+    # en utilisant votre éditeur de code préféré
 
-## License
+## Développement
 
-This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more details.
+### Structure du projet
+
+    mybudgetmanager/
+    ├── src/mybudgetmanager/                     # Sources Python (paquet importable)
+    │   ├── main.py                              # Point d’entrée principal pour MyBudgetManager
+    │   ├── utils/                               # Utilitaires partagés
+    │   └── ui/                                  # Interface utilisateur
+    │       ├── dialogs/                         # Fenêtres de dialogue
+    │       ├── widgets/                         # Composants réutilisables
+    │       └── windows/                         # Fenêtres
+    ├── mybudgetmanager.code-workspace           # Fichier d’espace de travail VS Code
+    ├── README.md                                # README principal avec avertissement
+    ├── LICENSE                                  # Licence MIT
+    ├── .gitignore                               # .gitignore
+    ├── .vscode/                                 # Paramètres de l’espace de travail Visual Studio Code
+    ├── assets/                                  # Ressources partagées (CC0 uniquement)
+    └── tests/                                   # Dossiers de tests
+        ├── integration/                         # Tests d’intégration
+        ├── unit/                                # Tests unitaires
+        ├── ui/                                  # Tests d’interface utilisateur
+        └── utils/                               # Tests des classes / fonctions utilitaires
+
+## Licence
+
+Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ---
 
-**Last updated**: 2026-11-16
+**Dernière mise à jour**: 2026-11-16
