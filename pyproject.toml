@@ -1,0 +1,106 @@
+# Definition of the build, metadata, and dependency management for the MyBudgetManager application.
+[build-system]
+requires = ["setuptools>=84.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mybudgetmanager"
+version = "0.1.0"
+description = "Open-source budget management application for tracking expenses and income"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "ultra-sonic-28", email = "your.email@example.com"}
+]
+maintainers = [
+    {name = "ultra-sonic-28", email = "your.email@example.com"}
+]
+keywords = [
+    "personal-finance",
+    "budgeting",
+    "expense-tracker", 
+    "money-management",
+    "family-finance",
+    "household-budget", 
+    "accounting",
+    "bookkeeping",
+    "cashflow",
+    "financial-planner"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: French",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+requires-python = ">=3.13"
+dependencies = [
+    "PySide6>=6.11.2",
+    "types-PySide6>=6.10.3.0",
+    "pydantic>=2.13.5",
+    "pillow>=12.3.0",
+    "PyYAML>=6.0.3",
+    "tomlkit>=0.15.1",
+    "qt-material>=2.17",
+    # IANA time zone data: required by ``zoneinfo`` on Windows (no system tz
+    # database) and pulled in as a hidden import by several dependencies.
+    "tzdata>=2024.1",
+]
+
+[project.optional-dependencies]
+# Development dependencies (for contributors)
+dev = [
+    "black>=26.5.1",
+    "ruff>=0.16.10",
+    "mypy>=2.4.0",
+    "types-PyYAML>=6.0.12",
+    "types-setuptools>=84.0.0",
+]
+
+# Lint dependencies
+lint = [
+    "black>=26.5.1",
+    "ruff>=0.16.10",
+    "mypy>=2.4.0",
+    "types-PyYAML>=6.0.12",
+    "types-setuptools>=84.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ultra-sonic-28/mybudgetmanager"
+Documentation = "https://github.com/ultra-sonic-28/mybudgetmanager/wiki"
+Repository = "https://github.com/ultra-sonic-28/mybudgetmanager"
+Issues = "https://github.com/ultra-sonic-28/mybudgetmanager/issues"
+
+[project.scripts]
+c4sp = "mybudgetmanager.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mybudgetmanager*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py313"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "S", "B", "A", "C4", "PT", "RET", "SIM"]
+ignore = ["S101", "S311", "E501", "RET504"]
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+mypy_path = "src"
+files = ["src/mybudgetmanager"]
